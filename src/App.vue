@@ -1,11 +1,10 @@
 
 <template>
   <div id="app">
-    <h1>{{ title }}</h1>
     <Navbar />
-    <AllFriends :friends="friends" @delete="deleteFriend" />
-    <OnlineFriends :friends="friends" />
-    <Blogs />
+    <b-container class="m-5">
+      <Datos />
+    </b-container>
   </div>
 </template>
 
@@ -14,6 +13,7 @@ import Navbar from "./NavBar.vue";
 import AllFriends from "./AllFriends";
 import OnlineFriends from "./AllOnlineFriends";
 import Blogs from "./Blogs";
+import Datos from "./datos.vue";
 
 export default {
   name: "app",
@@ -23,6 +23,7 @@ export default {
     OnlineFriends,
     AllFriends,
     Blogs,
+    Datos,
   },
   data() {
     return {

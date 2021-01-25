@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -16,7 +17,7 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      }, {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

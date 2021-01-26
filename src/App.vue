@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <Navbar />
-    <b-container class="m-5">
+    <b-container >
       <Datos />
     </b-container>
   </div>

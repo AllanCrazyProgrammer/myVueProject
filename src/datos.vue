@@ -14,7 +14,7 @@
       </b-col>
 
       <b-col cols="1">
-        <b-button>Calcular</b-button>
+        <Calcular v-bind:datos="datos"/>
       </b-col>
 
       <b-col cols="6">
@@ -27,17 +27,21 @@
 
 <script>
 import Cuentas from "./Cuentas.vue";
+import Calcular from "./Calcular";
+
 
 export default {
   name: "Datos",
   components: {
     Cuentas,
+    Calcular
   },
   data() {
     return {
       datos: "",
     };
   },
+  
 };
 </script>
 

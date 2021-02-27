@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <b-button v-on:click="getArray">Calcular</b-button>
   </div>
 </template>
@@ -20,7 +21,7 @@ export default {
       misDatos = misDatos.split(`\n`).filter((x) => x);
 
       console.log(misDatos);
-      this.$emit("getArray");
+      this.$emit("getArray", this.misDatos);
       return misDatos;
     },
   },

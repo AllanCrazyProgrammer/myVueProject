@@ -10,30 +10,17 @@
 
 <script>
 import Navbar from "./NavBar.vue";
-import AllFriends from "./AllFriends";
-import OnlineFriends from "./AllOnlineFriends";
-import Blogs from "./Blogs";
 import Datos from "./datos.vue";
 
 export default {
   name: "app",
   components: {
     Navbar,
-    AllFriends,
-    OnlineFriends,
-    AllFriends,
-    Blogs,
     Datos,
   },
   data() {
     return {
-      title: "Bienvenido al 2021, Allan",
-      friends: [
-        { name: "Allan", online: true },
-        { name: "Toad", online: false },
-        { name: "Bryan", online: true },
-        { name: "Jason", online: false },
-      ],
+
     };
   },
   methods: {

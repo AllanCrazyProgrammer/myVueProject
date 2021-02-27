@@ -2,7 +2,7 @@
   <div>
     <b-col>
       <h1>Cuentas</h1>
-      <h2>{{ this.misDatos }}</h2>
+      <h2 v-on:getArray="getCuentas($event)">{{ this.misDatos }}</h2>
     </b-col>
   </div>
 </template>
@@ -11,24 +11,21 @@
 import Datos from "./datos.vue";
 import Calcular from "./Calcular";
 
-
 export default {
   name: "Cuentas",
-  props: ["datos","misDatos"],
+  props: ["datos", "misDatos"],
 
   components: {
     Datos,
-    Calcular
+    Calcular,
   },
 
   methods: {
-    getCuentas(){
-      return
-    }
-  }
+    getCuentas(updateCuentas) {
+      this.calculos = updateCuentas;
+    },
+  },
 };
-
-
 </script>
 
 <style>

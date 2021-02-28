@@ -13,27 +13,23 @@
         ></textarea>
       </b-col>
 
-      <b-col cols="1">
+      <b-col cols="7">
         <Calcular v-bind:datos="datos"/>
       </b-col>
 
-      <b-col cols="6">
-        <Cuentas v-bind:datos="datos" />
-      </b-col>
+
     </b-row>
   </div>
 </template>
 
 
 <script>
-import Cuentas from "./Cuentas.vue";
 import Calcular from "./Calcular";
 
 
 export default {
   name: "Datos",
   components: {
-    Cuentas,
     Calcular
   },
   data() {

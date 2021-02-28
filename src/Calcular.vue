@@ -1,27 +1,40 @@
 <template>
   <div>
-    
-    <b-button v-on:click="getArray">Calcular</b-button>
+    <b-col cols="1">
+      <b-button v-on:click="getArray">Calcular</b-button>
+    </b-col>
+
+    <b-col cols="11">
+      <Cuentas v-model="misDatos"/>
+    </b-col>
   </div>
 </template>
 
 <script>
 import Datos from "./datos.vue";
+import Cuentas from "./Cuentas.vue";
+
 
 export default {
-  name: "Cuentas",
+  name: "Calcular",
   props: ["datos"],
 
   components: {
-    Datos,
+    Datos,Cuentas
+
   },
+
+  data: () =>({
+    misDatos: misDatos,
+  }),
+
+
   methods: {
     getArray() {
       let misDatos = this.datos;
       misDatos = misDatos.split(`\n`).filter((x) => x);
 
       console.log(misDatos);
-      this.$emit("getArray", this.misDatos);
       return misDatos;
     },
   },

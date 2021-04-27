@@ -5,7 +5,7 @@
     </b-col>
 
     <b-col cols="11">
-      <Cuentas v-model="misDatos"/>
+      <Cuentas :misDatos="misDatos"/>
     </b-col>
   </div>
 </template>
@@ -35,6 +35,7 @@ export default {
       misDatos = misDatos.split(`\n`).filter((x) => x);
 
       console.log(misDatos);
+      
       return misDatos;
     },
   },

@@ -3,7 +3,6 @@
     <b-col>
       <h1>Cuentas</h1>
       <h2>{{ this.misDatos }}</h2>
-      <h2>{{this.hello}}</h2>
     </b-col>
   </div>
 </template>
@@ -17,6 +16,11 @@ export default {
 
   components: {
     Datos,
+  },
+
+  updated(){
+   console.log(this.misDatos);
+
   },
 
   methods: {

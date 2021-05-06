@@ -2,42 +2,39 @@
   <div class="mt-5">
     <b-row>
       <b-col cols="5">
-        <textarea
+        <button onclick="window.location.reload();">Borrar datos</button>
+        <b-form-textarea
           class="text-center"
           name="dinero"
+          id="textarea-auto-height"
           placeholder="Dinero"
-          id=""
-          cols="60"
-          rows="60"
+          rows="3"
+          max-rows="100"
           v-model="datos"
-        ></textarea>
+        ></b-form-textarea>
       </b-col>
 
       <b-col cols="7">
-        <Calcular v-bind:datos="datos"/>
+        <Cuentas v-bind:datos="datos" />
       </b-col>
-
-
     </b-row>
   </div>
 </template>
 
 
 <script>
-import Calcular from "./Calcular";
-
+import Cuentas from "./Cuentas.vue";
 
 export default {
   name: "Datos",
   components: {
-    Calcular
+    Cuentas,
   },
   data() {
     return {
       datos: "",
     };
   },
-  
 };
 </script>
 
